@@ -5,7 +5,8 @@ This is a collection of CFG files for use with [Open PS2 Loader](https://github.
 
 A fork of [Tom-Bruise's CFG database](https://github.com/Tom-Bruise/PS2-OPL-CFG-Database) for PS2 games, this aims to fulfill the same goal, except for PS1 games. 
 
-These CFG files are unfortunately ONLY readable by the 10th anniversary edition of OPL 1.1 which had native PS1 Games support integrated. Newer versions based on OPL 1.2 use Apps to launch PS1 games and thus DO NOT SUPPORT the display of CFG file data.
+## These CFG files are unfortunately ONLY readable by the 10th Anniversary Edition of OPL 1.1 which had native PS1 Games support integrated. Newer versions based on OPL 1.2 use Apps to launch PS1 games and thus DO NOT SUPPORT the display of CFG file data.
+
 I hope that one day Apps can integrate support for this rich information, either in OPL Core or as part of tools like OPL Manager. Until then, this works with 1.1 10th Anniversary Edition and is a starting point for enriched game information on OPL for PS1. 
 
 Originally based on [Veritas83's CFG repository](https://github.com/Veritas83/PS2-OPL-CFG), this database 
@@ -60,7 +61,7 @@ Just create a pull request.
 
 * Be considerate about the size of the pull request. If you create one that involves thousands of games, there is no way I will be able to review it. Keep them small.
 * For descriptions:
-    * Lenght limit is 255 characters. 
+    * Length limit is 255 characters. 
     * If you are providing a new description, spell-check your English. No personal opinions about the video game. Keep it informative. No profanity, irrelevant stuff etc. Just have good taste.
 
 A word of warning: this was nothing more than a weekend project, and the time I have to dedicate to it is very, very limited. It might take time to review requests and make changes. 
