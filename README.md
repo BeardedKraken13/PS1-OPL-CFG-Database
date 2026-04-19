@@ -5,11 +5,11 @@ This is a collection of CFG files for use with [Open PS2 Loader](https://github.
 
 A fork of [Tom-Bruise's CFG database](https://github.com/Tom-Bruise/PS2-OPL-CFG-Database) for PS2 games, this aims to fulfill the same goal, except for PS1 games. 
 
-## These CFG files are unfortunately ONLY readable by the 10th Anniversary Edition of OPL 1.1 which had native PS1 Games support integrated. Newer versions based on OPL 1.2 use Apps to launch PS1 games and thus DO NOT SUPPORT the display of CFG file data.
+## These CFG files are unfortunately ONLY readable by the 10th Anniversary Edition of OPL 1.1 which had native PS1 Game support integrated. Newer versions based on OPL 1.2 use Apps to launch PS1 games and thus DO NOT SUPPORT the display of CFG file data.
 
-I hope that one day Apps can integrate support for this rich information, either in OPL Core or as part of tools like OPL Manager. Until then, this works with 1.1 10th Anniversary Edition and is a starting point for enriched game information on OPL for PS1. 
+I hope that one day Apps can integrate support for this rich information, either in OPL Core or as part of tools like OPL Manager. Until then, this database works with 1.1 10th Anniversary Edition and is a starting point for enriched game information on OPL for PS1. 
 
-Lacking a starting point such as Veritas83's, I instead queried Redump to get a list of all PS1 serials and game titles, which were further enriched using scraped data from ScreenScraper.fr. You can find the Python scripts used to create that xml file in the scripts folder. The additional scraped fields are:
+Lacking a starting point with baseline CFG files such as Veritas83's that Tom-Bruise used, I instead queried Redump to get a list of all PS1 serials and game titles in a DATFILE, which were then further enriched using scraped data from ScreenScraper.fr. You can find the Python scripts used to create that Redump based xml file in the scripts folder. The additional scraped fields are:
 
 * Game Description
 * Number Of Players
