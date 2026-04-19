@@ -1,4 +1,4 @@
-# The Open PS2 Loader CFG Database Project 
+# The Open PS2 Loader CFG Database Project for PS1
 
 ## Goal
 This is a collection of CFG files for use with [Open PS2 Loader](https://github.com/ifcaro/open-ps2-loader). 
