@@ -9,9 +9,6 @@ A fork of [Tom-Bruise's CFG database](https://github.com/Tom-Bruise/PS2-OPL-CFG-
 
 I hope that one day Apps can integrate support for this rich information, either in OPL Core or as part of tools like OPL Manager. Until then, this works with 1.1 10th Anniversary Edition and is a starting point for enriched game information on OPL for PS1. 
 
-Originally based on [Veritas83's CFG repository](https://github.com/Veritas83/PS2-OPL-CFG), this database 
-has been enriched with game information from [ScreenScraper.fr](https://www.screenscraper.fr), using a rather hacky script that can be found in the **_scripts_** folder of this repository.
-
 Lacking a starting point such as Veritas83's, I instead queried Redump to get a list of all PS1 serials and game titles, which were further enriched using scraped data from ScreenScraper.fr. You can find the Python scripts used to create that xml file in the scripts folder. The additional scraped fields are:
 
 * Game Description
