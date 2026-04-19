@@ -3,10 +3,15 @@
 ## Goal
 This is a collection of CFG files for use with [Open PS2 Loader](https://github.com/ifcaro/open-ps2-loader). 
 
+A fork of [Tom-Bruise's CFG database](https://github.com/Tom-Bruise/PS2-OPL-CFG-Database) for PS2 games, this aims to fulfill the same goal, except for PS1 games. 
+
+These CFG files are unfortunately ONLY readable by the 10th anniversary edition of OPL 1.1 which had native PS1 Games support integrated. Newer versions based on OPL 1.2 use Apps to launch PS1 games and thus DO NOT SUPPORT the display of CFG file data.
+I hope that one day Apps can integrate support for this rich information, either in OPL Core or as part of tools like OPL Manager. Until then, this works with 1.1 10th Anniversary Edition and is a starting point for enriched game information on OPL for PS1. 
+
 Originally based on [Veritas83's CFG repository](https://github.com/Veritas83/PS2-OPL-CFG), this database 
 has been enriched with game information from [ScreenScraper.fr](https://www.screenscraper.fr), using a rather hacky script that can be found in the **_scripts_** folder of this repository.
 
-The original CFG files already contained game titles and, in some cases, additional OPL configuration flags. The goal of this project was to mass-edit these files in an automated way, by adding the following info:
+Lacking a starting point such as Veritas83's, I instead queried Redump to get a list of all PS1 serials and game titles, which were further enriched using scraped data from ScreenScraper.fr. You can find the Python scripts used to create that xml file in the scripts folder. The additional scraped fields are:
 
 * Game Description
 * Number Of Players
@@ -18,16 +23,14 @@ The original CFG files already contained game titles and, in some cases, additio
 Here are some stats:
 
 ```
-Total CFG files          =  13620
-CFGs with Descriptions   =  6290
-CFGs with Players info   =  5374
-CFGs with Genre info     =  6235
-CFGs with Release date   =  6405
-CFGs with Developer info =  6235
-CFGs with Ratings        =  5289
+Total CFG files          =  5176
+CFGs with Descriptions   =  4716
+CFGs with Players info   =  4727
+CFGs with Genre info     =  4672
+CFGs with Release date   =  4730
+CFGs with Developer info =  4672
+CFGs with Ratings        =  4572
 ```
-
-You can find a list of games that could not be scraped in the *stats* folder.
 
 This collection of CFG files can be easily imported in [OPL Manager](https://oplmanager.com/site/), so every time you add a new game there is a good chance you have information already available for it.
 

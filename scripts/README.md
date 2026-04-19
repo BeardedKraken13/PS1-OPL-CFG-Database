@@ -42,7 +42,7 @@ For each CFG file in the input folder, the scripts will:
 
 1. Make a copy of the CFG file in the output folder.
 2. Extract the game name from the CFG file.
-3. Create a fake `GAME_NAME.iso` file (0 bytes) to give to Skyscraper.
+3. Create a fake `GAME_NAME.cue file (0 bytes) to give to Skyscraper.
 4. Skyscraper will contact Screenscaper.fr and try to generate a gamelist file containing only that game.
 5. The script will parse the 1-game `gamelist.xml` file to extract information about the game, and save it to the copied CFG file in a format that OPL understands.
 
@@ -65,6 +65,12 @@ You can configure additinoal options by opening the script and editing values un
 
 Use the `create_stats.sh` script, by passing your CFG folder as an argument. This will generate statistics regarding how many CFG files have a certain kind of information.
 
+## Additional Python Scripts
+
+There are two additional Python scripts. One, create_cfg_from_redump.py, takes in a Redump datfile (renamed to xml) and creates a collection of .cue files with ConfigVersion and Title present, as a starting point for scraping. 
+
+The other file, create_fake_roms.py, generates empty .cue files for use with screenscraper.fr. I found this useful as I wanted to create a cache of scraped data beyond the one game at a time approach of scrape_info.sh. Use these at your own risk!
+ 
 ## License
 
 The MIT License

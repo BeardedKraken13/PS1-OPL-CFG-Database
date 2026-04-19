@@ -3,7 +3,7 @@
 # Configurable Options
 
 MAX_DESCR_LENGTH=255						# Maximum description length to be used. As of now OPL Manager has a limit of 255 chars.
-FORCE_CACHE_ONLY=false						# Forces SkyScraper to use the local cache. Useful if you have been through a first successful scraping already.
+FORCE_CACHE_ONLY=false					# Forces SkyScraper to use the local cache. Useful if you have been through a first successful scraping already.
 MISSING_GAMES_LIST_NAME=missing_games.txt	# The name of the list containing the game names that are not present on the scraping site.
 OVERWRITE_EXISTING_FIELDS=true				# If true, update fields in the CFG file with new information in they already exists.		
 CREDENTIALS=								# Screenscraper.fr credentials in username:password format. Leave empty for anonymous.
@@ -17,8 +17,8 @@ GAMELIST_FILE=gamelist.xml					# the name of the gamelist file created by SkyScr
 WORK_DIR=${WORK_DIR_PATH}/${WORK_DIR_NAME}
 
 # Functions
-
 # arg1: destination folder
+
 function setup () {
 	if [[ -n ${1} ]]; 
     then 
@@ -54,7 +54,7 @@ function is_game_list_empty () {
 # arg1: Name of the game to be scraped.
 function fetch_game_info () {
 	# Create a fake file to be scraped by SkyScraper
-	FAKE_FILE_PATH="${WORK_DIR}/${1}.iso"
+	FAKE_FILE_PATH="${WORK_DIR}/${1}.cue"
 	echo $FAKE_FILE_PATH
 	touch "${FAKE_FILE_PATH}"
 	
@@ -66,11 +66,11 @@ function fetch_game_info () {
 
 	# Scrape the info, if not in the Skyscraper cache.
 	if [[ "$FORCE_CACHE_ONLY" = false ]]; then
-		Skyscraper -p ps2 -s screenscraper ${CREDARG} --lang=${LANGUAGE} --nocovers --noscreenshots --nowheels --nomarquees --nobrackets --unattend -i ${WORK_DIR} "${FAKE_FILE_PATH}"
+		Skyscraper -p psx -s screenscraper ${CREDARG} --lang="en" --flags unattend,nocovers,noscreenshots,nowheels,nomarquees,nobrackets -i ${WORK_DIR} "${FAKE_FILE_PATH}"
 	fi
 	
 	# Generate 1-entry gamelist to save the info
-	Skyscraper -p ps2 -f emulationstation --unattend -i ${WORK_DIR} -g ${WORK_DIR} 
+	Skyscraper -p psx -f emulationstation --flags unattend -i ${WORK_DIR} -g ${WORK_DIR} 
 	
 	# Convert XML special characters into normal characters, e.g.
 	# " from &quot;
